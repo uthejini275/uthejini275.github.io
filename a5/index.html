@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    input {
+      display: block;
+      margin: 10px 0;
+      padding: 8px;
+      width: 250px;
+    }
+
+    button {
+      padding: 8px 16px;
+      background-color: teal;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #output {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>User Information Form</h2>
+  <input type="text" id="name" placeholder="Enter your name">
+  <input type="email" id="email" placeholder="Enter your email">
+  <input type="password" id="password" placeholder="Enter your password">
+  <button onclick="displayInfo()">Submit</button>
+
+  <div id="output"></div>
+
+  <script>
+    function displayInfo() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      document.getElementById("output").innerHTML = `
+        Name: ${name} <br>
+        Email: ${email} <br>
+        Password: ${password}
+      `;
+    }
+  </script>
+
+</body>
+</html>
+
