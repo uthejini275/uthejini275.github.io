@@ -7,7 +7,6 @@ const showLogin = () => {
       <p><button onclick="login()">Log In</button></p>
       <p><button onclick="showRegister()">Create Account</button></p>
     </div>
-    <div id="message"></div>
   `;
   root.innerHTML = str;
 };
@@ -21,15 +20,14 @@ const showRegister = () => {
       <p><input type="password" id="txtPass" placeholder="Password"></p>
       <p><button onclick="register()">Register</button></p>
     </div>
-    <div id="message"></div>
   `;
   root.innerHTML = str;
 };
 
 const login = () => {
-  document.getElementById("message").innerText = "Welcome!";
+  root.innerHTML = `<h1>Welcome!</h1>`;
 };
 
 const register = () => {
-  document.getElementById("message").innerText = "Account Created!";
+  root.innerHTML = `<h1>Account Created!</h1>`;
 };
