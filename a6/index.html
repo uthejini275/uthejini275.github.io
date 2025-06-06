@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fruit Adder</title>
+  </head>
+  <body>
+    <h2>Fruit List</h2>
+
+    <input id="fruitInput" />
+    <button onclick="addFruit()">Add</button>
+
+    <div id="fruitList"></div>
+
+    <script>
+      const fruits = []; 
+
+      function addFruit() {
+        const input = document.getElementById("fruitInput");
+        const fruit = input.value;
+
+        fruits.push(fruit);    
+        displayFruits();      
+        input.value = "";      
+      }
+
+      function displayFruits() {
+        document.getElementById("fruitList").innerHTML = ""; 
+
+        fruits.map(function(fruit, index) {
+          const p = document.createElement("p");
+          p.innerText = (index + 1) + ". " + fruit; 
+          document.getElementById("fruitList").appendChild(p);
+        });
+      }
+    </script>
+  </body>
+</html>
